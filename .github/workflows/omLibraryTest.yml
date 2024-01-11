@@ -1,0 +1,32 @@
+name: Continuous Integration using openmodelica-library-testing-action
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'releases/*'
+    tags: '*'
+
+jobs:
+  test:
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        omc-version: ['1.13', '1.18', stable]
+
+    steps:
+      - uses: AnHeuermann/openmodelica-library-testing@v0.1
+        id: library-testing
+        with:
+          package-name: PNlib
+          package-version: 1.0
+          modelica-file: PNlib.mo
+          dependencies: |
+            Modelica 3.2.0
+          omc-version: ${{ matrix.omc-version }}
+          publish-gh-pages: true
+          gh-pages-ref: gh-pages
+          pages-root-url: https://AnHeuermann.github.io/ExampleModelicaLibrary
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
