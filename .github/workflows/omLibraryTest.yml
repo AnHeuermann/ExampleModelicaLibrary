@@ -66,10 +66,12 @@ jobs:
       - name: Get HTML artifact
         uses: actions/download-artifact@v4
         with:
-          name: PNlib-${{ github.run_id }}.html
+          path: html/
+          pattern: '*.html'
+          merge-multiple: true
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: '.'
+          folder: html/
           branch: gh-pages
