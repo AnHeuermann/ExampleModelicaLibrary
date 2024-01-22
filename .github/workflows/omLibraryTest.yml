@@ -45,10 +45,11 @@ jobs:
         uses: AnHeuermann/openmodelica-library-testing-action@main
         id: library-testing
         with:
-          package-name: 'PNlib'
-          package-version: ${{ github.ref }}
+          library: 'PNlib'
+          library-version: ${{ github.ref }}
           modelica-file: PNlib.mo
           omc-version: ${{ matrix.omc-version }}
+          pages-root-url: 'https://anheuermann.github.io/ExampleModelicaLibrary/'
 
   deploy:
     needs: test
