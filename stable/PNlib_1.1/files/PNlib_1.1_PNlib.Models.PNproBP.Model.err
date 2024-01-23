@@ -1,0 +1,21 @@
+Running: ./testmodel.py --libraries=/home/runner/.openmodelica/libraries/ --ompython_omhome= PNlib_1.1_PNlib.Models.PNproBP.Model.conf.json
+loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
+Using package PNlib with version 1.1 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
+Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
+Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
+Running command: translateModel(PNlib.Models.PNproBP.Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.PNproBP.Model")
+translateModel(PNlib.Models.PNproBP.Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.PNproBP.Model")
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001932/0.001932, allocations: 117.1 kB / 15.61 MB, free: 5.211 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009948/0.0009949, allocations: 170.8 kB / 16.51 MB, free: 4.633 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.257/1.257, allocations: 170.5 MB / 187.8 MB, free: 10.39 MB / 154.7 MB
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05054/0.05054, allocations: 8.293 MB / 234.7 MB, free: 11.37 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0007982/0.0007983, allocations: 12 kB / 285.6 MB, free: 6.977 MB / 202.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.06997/0.07079, allocations: 39.91 MB / 325.5 MB, free: 15.04 MB / 250.7 MB
+Notification: Performance of NFInst.instantiate(PNlib.Models.PNproBP.Model): time 0.2792/0.35, allocations: 137.7 MB / 463.2 MB, free: 0.9219 MB / 346.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Constants/package.mo:7:3-7:52:writable] Error: Function arcsin not found in scope Constants.
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/activationDis.mo:40:9-42:15:writable] Error: Variable Constants.eps not found in scope activationDis.
+Notification: Performance of FrontEnd: time 0.4384/0.7884, allocations: 19.27 MB / 482.4 MB, free: 1.953 MB / 362.8 MB

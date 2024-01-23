@@ -1,0 +1,22 @@
+Running: ./testmodel.py --libraries=/home/runner/.openmodelica/libraries/ --ompython_omhome= PNlib_1.1_PNlib.Models.Printing.Model.conf.json
+loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
+Using package PNlib with version 1.1 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
+Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
+Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
+Running command: translateModel(PNlib.Models.Printing.Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.Printing.Model")
+translateModel(PNlib.Models.Printing.Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.Printing.Model")
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001884/0.001884, allocations: 112.2 kB / 15.61 MB, free: 4.801 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009856/0.0009856, allocations: 166.3 kB / 16.51 MB, free: 4.379 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.266/1.266, allocations: 170.5 MB / 187.8 MB, free: 10.17 MB / 154.7 MB
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05095/0.05095, allocations: 8.297 MB / 234.7 MB, free: 11.13 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005557/0.0005558, allocations: 12 kB / 285.6 MB, free: 6.91 MB / 202.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.05655/0.05712, allocations: 39.91 MB / 325.5 MB, free: 14.97 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/TC.mo:21:3-21:77:writable] Warning: An inner declaration for outer component settings1 could not be found and was automatically generated.
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/TC.mo:21:3-21:77:writable] Notification: The diagnostics message for the missing inner is: The settings object is missing
+Notification: Performance of NFInst.instantiate(PNlib.Models.Printing.Model): time 0.2269/0.2841, allocations: 49.16 MB / 374.7 MB, free: 9.141 MB / 266.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/testArcEvent.mo:22:6-28:14:writable] Error: A when-statement may not be used inside a function or a while, if, or for-clause.
+Notification: Performance of FrontEnd: time 0.0006078/0.2847, allocations: 217 kB / 374.9 MB, free: 8.949 MB / 266.7 MB

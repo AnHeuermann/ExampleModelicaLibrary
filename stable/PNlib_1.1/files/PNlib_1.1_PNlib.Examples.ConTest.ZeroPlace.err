@@ -1,0 +1,20 @@
+Running: ./testmodel.py --libraries=/home/runner/.openmodelica/libraries/ --ompython_omhome= PNlib_1.1_PNlib.Examples.ConTest.ZeroPlace.conf.json
+loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
+Using package PNlib with version 1.1 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
+Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
+Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
+Running command: translateModel(PNlib.Examples.ConTest.ZeroPlace,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.ConTest.ZeroPlace")
+translateModel(PNlib.Examples.ConTest.ZeroPlace,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.ConTest.ZeroPlace")
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001894/0.001894, allocations: 114.7 kB / 15.61 MB, free: 5.25 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.001004/0.001004, allocations: 170.8 kB / 16.52 MB, free: 4.652 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.264/1.264, allocations: 170.5 MB / 187.8 MB, free: 10.38 MB / 154.7 MB
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.06837/0.06837, allocations: 8.301 MB / 234.7 MB, free: 11.34 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005436/0.0005436, allocations: 12 kB / 285.6 MB, free: 6.938 MB / 202.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.05583/0.05639, allocations: 39.9 MB / 325.5 MB, free: 15 MB / 250.7 MB
+Notification: Performance of NFInst.instantiate(PNlib.Examples.ConTest.ZeroPlace): time 0.003775/0.0602, allocations: 3.275 MB / 328.8 MB, free: 11.71 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/testArcEvent.mo:22:6-28:14:writable] Error: A when-statement may not be used inside a function or a while, if, or for-clause.
+Notification: Performance of FrontEnd: time 0.0006228/0.06084, allocations: 195.5 kB / 329 MB, free: 11.52 MB / 250.7 MB

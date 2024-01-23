@@ -1,0 +1,21 @@
+Running: ./testmodel.py --libraries=/home/runner/.openmodelica/libraries/ --ompython_omhome= PNlib_1.1_PNlib.Examples.DisTest.DisLoopAndArcweight.conf.json
+loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
+Using package PNlib with version 1.1 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
+Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
+Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
+Running command: translateModel(PNlib.Examples.DisTest.DisLoopAndArcweight,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.DisTest.DisLoopAndArcweight")
+translateModel(PNlib.Examples.DisTest.DisLoopAndArcweight,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.DisTest.DisLoopAndArcweight")
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001925/0.001925, allocations: 119.3 kB / 15.61 MB, free: 4.754 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.001008/0.001008, allocations: 168.6 kB / 16.51 MB, free: 4.328 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.283/1.283, allocations: 170.5 MB / 187.8 MB, free: 10.39 MB / 154.7 MB
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.04988/0.04988, allocations: 8.301 MB / 234.7 MB, free: 11.34 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005523/0.0005524, allocations: 15.98 kB / 285.6 MB, free: 6.957 MB / 202.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.05692/0.05749, allocations: 39.92 MB / 325.5 MB, free: 15.01 MB / 250.7 MB
+Notification: Performance of NFInst.instantiate(PNlib.Examples.DisTest.DisLoopAndArcweight): time 0.002567/0.06009, allocations: 1.63 MB / 327.1 MB, free: 13.38 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Constants/package.mo:7:3-7:52:writable] Error: Function arcsin not found in scope Constants.
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PD.mo:9:3-9:135:writable] Error: Variable PNlib.Constants.Integer_inf not found in scope PD.
+Notification: Performance of FrontEnd: time 0.3164/0.3765, allocations: 19.2 MB / 346.4 MB, free: 9.105 MB / 250.8 MB
