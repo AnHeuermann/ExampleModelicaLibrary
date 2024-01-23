@@ -12,24 +12,66 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 60
-    permissions:
-      contents: write
     strategy:
       matrix:
-        omc-version: ['1.13', '1.18', stable]
+        omc-version: ['stable']
+      fail-fast: false
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Update pip
+        run: |
+          pip install --upgrade pip
+
+      - name: Setup OpenModelica
+        uses: AnHeuermann/setup-openmodelica@v0.7
+        with:
+          version: ${{ matrix.omc-version }}
+          packages: |
+            omc
+          libraries: |
+            Modelica 3.2.0
+            ModelicaAdditions 1.5
+          omc-diff: true
+
       - name: openmodelica-library-testing
-        uses: AnHeuermann/openmodelica-library-testing-action@v0.1.0
+        uses: AnHeuermann/openmodelica-library-testing-action@main
         id: library-testing
         with:
-          package-name: PNlib
-          package-version: 1.0
+          library: 'PNlib'
+          library-version: ${{ github.ref }}
           modelica-file: PNlib.mo
-          dependencies: |
-            Modelica 3.2.0
           omc-version: ${{ matrix.omc-version }}
-          publish-gh-pages: true
-          gh-pages-ref: gh-pages
-          pages-root-url: https://AnHeuermann.github.io/ExampleModelicaLibrary
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pages-root-url: 'https://anheuermann.github.io/ExampleModelicaLibrary/'
+
+  deploy:
+    needs: test
+    permissions:
+      contents: write
+    if: ${{ always() }}
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get HTML artifact
+        uses: actions/download-artifact@v4
+        with:
+          path: html/
+          pattern: '*.html'
+          merge-multiple: true
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: html/
+          branch: gh-pages
