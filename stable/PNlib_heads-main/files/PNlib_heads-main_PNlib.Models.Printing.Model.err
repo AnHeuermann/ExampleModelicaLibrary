@@ -1,4 +1,4 @@
-Running: ./testmodel.py --libraries=/home/runner/.openmodelica/libraries/ --ompython_omhome= PNlib_pr-1_PNlib.Models.PNproBP.Model.conf.json
+Running: ./testmodel.py --libraries=/home/runner/.openmodelica/libraries/ --ompython_omhome= PNlib_heads-main_PNlib.Models.Printing.Model.conf.json
 loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 1.1.0/package.mo", uses=false)
 loadFile("/home/runner/.openmodelica/libraries/Complex 1.1.0/package.mo", uses=false)
 loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.0+maint.om/package.mo", uses=false)
@@ -7,10 +7,10 @@ Using package PNlib with version 1 (/home/runner/work/ExampleModelicaLibrary/Exa
 Using package Modelica with version 3.2 (/home/runner/.openmodelica/libraries/Modelica 3.2.0+maint.om/package.mo)
 Using package Complex with version 1.1 (/home/runner/.openmodelica/libraries/Complex 1.1.0/package.mo)
 Using package ModelicaServices with version 1.1 (/home/runner/.openmodelica/libraries/ModelicaServices 1.1.0/package.mo)
-Running command: translateModel(PNlib.Models.PNproBP.Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_pr-1_PNlib.Models.PNproBP.Model")
-translateModel(PNlib.Models.PNproBP.Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_pr-1_PNlib.Models.PNproBP.Model")
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 1.1.0/package.mo): time 0.001731/0.001731, allocations: 81.22 kB / 15.58 MB, free: 5.273 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 1.1.0/package.mo): time 0.000854/0.000854, allocations: 155.2 kB / 16.46 MB, free: 4.707 MB / 13.93 MB
+Running command: translateModel(PNlib.Models.Printing.Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_heads-main_PNlib.Models.Printing.Model")
+translateModel(PNlib.Models.Printing.Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_heads-main_PNlib.Models.Printing.Model")
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 1.1.0/package.mo): time 0.001609/0.001609, allocations: 85.56 kB / 15.58 MB, free: 5.273 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 1.1.0/package.mo): time 0.0008544/0.0008544, allocations: 156.6 kB / 16.46 MB, free: 4.707 MB / 13.93 MB
 [/home/runner/.openmodelica/libraries/Modelica 3.2.0+maint.om/Fluid/Dissipation.mo:8490:35-8490:107:writable] Warning: The file was not encoded in UTF-8:
   "  <html> <p> Calculation of a generic pressure loss in dependence of nom...".
   Defaulting to 7-bit ASCII with unknown characters replaced by '?'.
@@ -35,7 +35,7 @@ Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Compl
   To change encoding when loading a file: loadFile(encoding="ISO-XXXX-YY").
   To change it in a package: add a file package.encoding at the top-level.
   Note: The Modelica Language Specification only allows files encoded in UTF-8.
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.0+maint.om/package.mo): time 1.096/1.096, allocations: 150.5 MB / 167.7 MB, free: 1.914 MB / 138.7 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.0+maint.om/package.mo): time 1.075/1.075, allocations: 150.5 MB / 167.7 MB, free: 1.914 MB / 138.7 MB
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib.mo:5:36-5:10805:writable] Warning: Lexer treating \ as \\, since \P is not a valid Modelica escape sequence.
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib.mo:5:36-5:10825:writable] Warning: Lexer treating \ as \\, since \D is not a valid Modelica escape sequence.
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib.mo:5:36-5:10842:writable] Warning: Lexer treating \ as \\, since \S is not a valid Modelica escape sequence.
@@ -85,12 +85,13 @@ Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Model
   To change encoding when loading a file: loadFile(encoding="ISO-XXXX-YY").
   To change it in a package: add a file package.encoding at the top-level.
   Note: The Modelica Language Specification only allows files encoded in UTF-8.
-Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib.mo): time 0.04711/0.04711, allocations: 6.916 MB / 209.2 MB, free: 5.238 MB / 170.7 MB
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib.mo): time 0.04719/0.04719, allocations: 6.918 MB / 209.2 MB, free: 5.238 MB / 170.7 MB
 [/home/runner/.openmodelica/libraries/ModelicaAdditions 1.5.0/Blocks/package.mo:1:1-59:11:writable] Error: Expected the package to have within ModelicaAdditions; but got within ;.
 Notification: Skipped loading package ModelicaAdditions (1.5,default) using MODELICAPATH /home/runner/.openmodelica/libraries/ (uses-annotation may be wrong).
-Notification: Performance of FrontEnd - loaded program: time 0.02644/0.02644, allocations: 19.22 MB / 274.9 MB, free: 13.71 MB / 202.7 MB
-Notification: Performance of FrontEnd - Absyn->SCode: time 0.05233/0.07878, allocations: 35.53 MB / 310.4 MB, free: 10.2 MB / 234.7 MB
-Notification: Performance of NFInst.instantiate(PNlib.Models.PNproBP.Model): time 0.2871/0.366, allocations: 137.6 MB / 448 MB, free: 5.734 MB / 314.7 MB
-[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib.mo:3162:5-3162:35:writable] Error: Function arcsin not found in scope Constants.
-[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib.mo:2040:13-2042:19:writable] Error: Variable Constants.eps not found in scope activationDis.
-Notification: Performance of FrontEnd: time 0.0005531/0.3666, allocations: 109.2 kB / 448.1 MB, free: 5.629 MB / 314.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.02669/0.02669, allocations: 19.22 MB / 274.9 MB, free: 13.7 MB / 202.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.05186/0.07856, allocations: 35.52 MB / 310.4 MB, free: 10.2 MB / 234.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib.mo:1358:7-1359:50:writable] Warning: An inner declaration for outer component settings1 could not be found and was automatically generated.
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib.mo:1358:7-1359:50:writable] Notification: The diagnostics message for the missing inner is: The settings object is missing
+Notification: Performance of NFInst.instantiate(PNlib.Models.Printing.Model): time 0.02522/0.1038, allocations: 29.96 MB / 340.3 MB, free: 12.1 MB / 266.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib.mo:2792:10-2798:18:writable] Error: A when-statement may not be used inside a function or a while, if, or for-clause.
+Notification: Performance of FrontEnd: time 0.0005219/0.1043, allocations: 223.5 kB / 340.6 MB, free: 11.88 MB / 266.7 MB
