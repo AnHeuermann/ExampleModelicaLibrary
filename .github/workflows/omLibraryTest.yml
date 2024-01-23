@@ -37,7 +37,7 @@ jobs:
           packages: |
             omc
           libraries: |
-            Modelica 3.2.0
+            Modelica 3.2.1
             ModelicaAdditions 1.5
           omc-diff: true
 
@@ -46,8 +46,8 @@ jobs:
         id: library-testing
         with:
           library: 'PNlib'
-          library-version: ${{ github.ref }}
-          modelica-file: PNlib.mo
+          library-version: '1.1'
+          modelica-file: PNlib/package.mo
           omc-version: ${{ matrix.omc-version }}
           pages-root-url: 'https://anheuermann.github.io/ExampleModelicaLibrary/'
 
