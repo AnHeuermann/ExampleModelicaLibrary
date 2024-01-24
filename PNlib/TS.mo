@@ -11,15 +11,15 @@ model TS "Stochastic Transition"
   Boolean firingCon=true "additional firing condition" annotation(Dialog(enable = true, group = "Firing Condition"));
   //****MODIFIABLE PARAMETERS AND VARIABLES END****//
   discrete Real putFireTime "putative firing time";
-  Integer showTransitionName=settings1.showTransitionName
+  Integer showTransitionName=settings.showTransitionName
     "only for transition animation and display (Do not change!)";
-  Integer animatePutFireTime=settings1.animatePutFireTime
+  Integer animatePutFireTime=settings.animatePutFireTime
     "only for transition animation and display (Do not change!)";
-  Integer animateHazardFunc=settings1.animateHazardFunc
+  Integer animateHazardFunc=settings.animateHazardFunc
     "only for transition animation and display (Do not change!)";
   Real color[3] "only for transition animation and display (Do not change!)";
 protected
-  outer PNlib.Settings settings1 "global settings for animation and display";
+  outer PNlib.Settings settings "global settings for animation and display";
   discrete Real fireTime "for transition animation";
   discrete Real hold "old value of hazard function";
   Real tIn[nIn] "tokens of input places";
@@ -59,9 +59,9 @@ protected
   //activation process
   Blocks.activationDis activation(testValue=testValue,testValueInt=testValueInt,normalArc=normalArc,nIn=nIn,nOut=nOut,tIn=tIn, tOut=tOut, tIntIn=tIntIn,tIntOut=tIntOut,arcType=arcType,arcWeightIn=arcWeightIn, arcWeightIntIn=arcWeightIntIn, arcWeightOut=arcWeightOut, arcWeightIntOut=arcWeightIntOut, minTokens=minTokens, maxTokens=maxTokens, minTokensInt=minTokensInt, maxTokensInt=maxTokensInt,firingCon=firingCon,disPlaceIn=disPlaceIn,disPlaceOut=disPlaceOut);
   //Is the transition enabled by all input places?
-  Blocks.allTrue enabledByInPlaces(vec=enableIn);
+  Boolean enabledByInPlaces = Functions.OddsAndEnds.allTrue(enableIn);
   //Is the transition enabled by all output places?
-  Blocks.allTrue enabledByOutPlaces(vec=enableOut);
+  Boolean enabledByOutPlaces = Functions.OddsAndEnds.allTrue(enableOut);
   //Has at least one input place changed its tokens?
   Blocks.anyTrue tokenChange(vec=tokenInOut);
   //****BLOCKS END****//
@@ -86,14 +86,14 @@ public
   testValue=testValue,
   testValueint=testValueInt,
   normalArc=normalArc) "connector for input places"                                                                                              annotation (Placement(transformation(extent={{
-            -56,-10},{-40,10}}, rotation=0),visible=DynamicSelect(true,if nIn==0 then false else true)));
+            -56,-10},{-40,10}}, rotation=0)));
 
   PNlib.Interfaces.TransitionOut outPlaces[nOut](
   each active=delayPassed,
   arcWeight=arcWeightOut,
   arcWeightint=arcWeightIntOut,
   each fire=fire,
-  each enabledByInPlaces=enabledByInPlaces.alltrue,
+  each enabledByInPlaces=enabledByInPlaces,
   each disTransition=true,
   each instSpeed=0,
   each prelimSpeed=0,
@@ -104,7 +104,7 @@ public
   maxTokensint=maxTokensInt,
   disPlace=disPlaceOut,
   enable=enableOut) "connector for output places"                                                                annotation (Placement(transformation(extent={
-            {40,-10},{56,10}}, rotation=0),visible=DynamicSelect(true,if nOut==0 then false else true)));
+            {40,-10},{56,10}}, rotation=0)));
 equation
   //****MAIN BEGIN****//
   //reset active when delay passed
@@ -112,14 +112,14 @@ equation
   //delay passed?
   delayPassed = active and time  >= putFireTime;
   //firing process
-  fire=if nOut==0 then enabledByInPlaces.alltrue else enabledByOutPlaces.alltrue;
+  fire=if nOut==0 then enabledByInPlaces else enabledByOutPlaces;
   //****MAIN END****//
   //****ANIMATION BEGIN****//
   when fire then
      fireTime=time;
      ani=true;
    end when;
-   color=if (fireTime+settings1.timeFire>=time and settings1.animateTransition==1 and ani) then {255,255,0} else {0,0,0};
+   color=if (fireTime+settings.timeFire>=time and settings.animateTransition==1 and ani) then {255,255,0} else {0,0,0};
    //****ANIMATION END****//
    //****ERROR MESSENGES BEGIN****//
     for i in 1:nIn loop
@@ -143,7 +143,7 @@ equation
    //****ERROR MESSENGES END****//
 algorithm
    //****MAIN BEGIN****//
-  //generate random putative fire time accoring to Next-Reaction method of Gibson and Bruck
+  //generate random putative fire time according to Next-Reaction method of Gibson and Bruck
   when active then    //17.06.11 Reihenfolge getauscht!
      putFireTime:=time +Functions.Random.randomexp(h);
      hold:=h;

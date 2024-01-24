@@ -16,14 +16,14 @@ protected
   Boolean TEin[nIn] "enabled input transitions";
   Boolean disTAin[nIn] "discret active input transitions";
   Integer remTAin[nIn] "remaining active input transitions";
-  Real cumEnablingProb[nIn] "cumulated, scaled enabling probabilities";
-  Real arcWeightSum "arc weight sum";
+  discrete Real cumEnablingProb[nIn] "cumulated, scaled enabling probabilities";
+  discrete Real arcWeightSum "arc weight sum";
   Integer nremTAin "number of remaining active input transitions";
   Integer nTAin "number ofactive input transitions";
   Integer k "iteration index";
   Integer posTE "possible enabled transition";
-  Real randNum "uniform distributed random number";
-  Real sumEnablingProbTAin
+  discrete Real randNum "uniform distributed random number";
+  discrete Real sumEnablingProbTAin
     "sum of the enabling probabilities of the active input transitions";
   Boolean endWhile;
 algorithm
@@ -31,14 +31,14 @@ algorithm
     if nIn>0 then
       disTAin:=TAein and disTransition;
       arcWeightSum:=Functions.OddsAndEnds.conditionalSum(arcWeight,disTAin);  //arc weight sum of all active input transitions which are already enabled by their input places
-      if t + arcWeightSum <= maxMarks or arcWeightSum==0 then  //Place has no actual conflict; all active input transitions are enabled
+      if t + arcWeightSum <= maxMarks or Functions.OddsAndEnds.isEqual(arcWeightSum, 0.0) then  //Place has no actual conflict; all active input transitions are enabled
         TEin:=TAein;
       else                          //Place has an actual conflict
         TEin:=TAein and not disTransition;
         if enablingType==1 then     //deterministic enabling according to priorities
           arcWeightSum:=0;
           for i in 1:nIn loop
-            if disTAin[i] and ((t+(arcWeightSum+arcWeight[i])<=maxMarks) or arcWeight[i]==0) then
+            if disTAin[i] and ((t+(arcWeightSum+arcWeight[i])<=maxMarks) or Functions.OddsAndEnds.isEqual(arcWeight[i], 0.0)) then
               TEin[i]:=true;
               arcWeightSum:=arcWeightSum + arcWeight[i];
             end if;
@@ -60,11 +60,9 @@ algorithm
           for j in 2:nremTAin loop
             cumEnablingProb[j]:=cumEnablingProb[j-1]+enablingProb[remTAin[j]]/sumEnablingProbTAin;
           end for;
-          //muss hier stehen sonst immer fast gleiche Zufallszahl => immer gleiches enabling
-          randNum := PNlib.Functions.Random.random()/32767;
           for i in 1:nTAin loop
-            randNum := PNlib.Functions.Random.random()/32767;
-                                              //uniform distributed random number
+            randNum := PNlib.Functions.Random.random()/PNlib.Constants.rand_max;
+            //uniform distributed random number
             endWhile:=false;
             k:=1;
             while k<=nremTAin and not endWhile loop
@@ -75,7 +73,7 @@ algorithm
                   k:=k + 1;
                 end if;
             end while;
-            if t+arcWeightSum + arcWeight[posTE] <= maxMarks or arcWeight[i]==0 then
+            if t+arcWeightSum + arcWeight[posTE] <= maxMarks or Functions.OddsAndEnds.isEqual(arcWeight[i], 0.0) then
                arcWeightSum:=arcWeightSum + arcWeight[posTE];
                TEin[posTE]:=true;
             end if;

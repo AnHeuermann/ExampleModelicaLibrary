@@ -1,41 +1,36 @@
 # PNlib
-Free library for Modeling xHPN
+Free Modelica library for modelling xHPN.
 
 ## Library description
-
 The advanced Petri Net library, called PNlib, enables the modeling of extended hybrid Petri Nets (xHPN). It comprises
- * a discrete (PD) and a continuous place (PC),
- * a discrete (TD), a stochastic (TS), and a continuous transitions (TC), and
- * a test (TA), an inhibitor (IA), and a read arcs (RA).
+ * discrete (PD) and continuous places (PC),
+ * discrete (TD), stochastic (TS), and continuous transitions (TC), and
+ * test (TA), inhibitor (IA), and read arcs (RA).
+
+![iconsxHPN](PNlib/Resources/Images/iconsxHPN.png "xHPN: Extended Hybrid Petri Nets")
 
 The main package PNlib is divided into the following sub-packages:
-
- * Interfaces: contains the connectors of the Petri net component models.
- * Blocks: contains blocks with specific procedures that are used in the Petri net component models.
- * Functions: contains functions with specific algorithmic procedures which are used in the Petri net component models.
- * Constants: contains constants which are used in the Petri net component models.
- * Models: contains several examples and offers the possibility to structure further Petri net models.
+ * _Interfaces_: contains the connectors of the Petri net component models.
+ * _Blocks_: contains blocks with specific procedures that are used in the Petri net component models.
+ * _Functions_: contains functions with specific algorithmic procedures which are used in the Petri net component models.
+ * _Constants_: contains constants which are used in the Petri net component models.
+ * _Examples_: contains several examples and unit tests.
 
 ## Current release
+Download [PNlib v1.3 (2016-04-19)](../../archive/v1.3.zip)
 
-Download [PNlib v1.0 (2012-05-15)](../../archive/v1.0.zip)
-
-#### Release notes
-
-* Version v1.1 (2014-12-19)
-  * This is basically an adaption of PNlib version 1.0 to Modelica 3.3 to remove tool dependencies (e.g. impure instead of __Dymola_pure annotation).
-* [Version v1.0 (2012-05-15)](../../archive/v1.0.zip)
-  * Initial release.
+## Compatibility
+* Works in OpenModelica 1.9.4 ([trend](https://test.openmodelica.org/libraries/history/PNlib-trend.svg), [coverage](https://test.openmodelica.org/libraries/PNlib/BuildModelRecursive.html))
+* Works in Dymola 2016
 
 ## License
-
 This Modelica package is free software and the use is completely at your own risk;
 it can be redistributed and/or modified under the terms of the [Modelica License 2](https://modelica.org/licenses/ModelicaLicense2).
 
 ## Development and contribution
     University of Applied Sciences Bielefeld
     Department of engineering and mathematics
-    33609 Bielefeld - Germany
+    33619 Bielefeld - Germany
     http://www.fh-bielefeld.de/ammo
 * Sabrina Pro&szlig;
 * Lennart Ochel

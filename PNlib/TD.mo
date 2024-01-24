@@ -10,13 +10,13 @@ model TD "Discrete Transition"
                                      annotation(Dialog(enable = true, group = "Arc Weights"));
   Boolean firingCon=true "additional firing condition" annotation(Dialog(enable = true, group = "Firing Condition"));
   //****MODIFIABLE PARAMETERS AND VARIABLES END****//
-  Integer showTransitionName=settings1.showTransitionName
+protected
+  outer PNlib.Settings settings "global settings for animation and display";
+  Integer showTransitionName=settings.showTransitionName
     "only for transition animation and display (Do not change!)";
-  Integer showDelay=settings1.showDelay
+  Integer showDelay=settings.showDelay
     "only for transition animation and display (Do not change!)";
   Real color[3] "only for transition animation and display (Do not change!)";
-protected
-  outer PNlib.Settings settings1 "global settings for animation and display";
   Real tIn[nIn] "tokens of input places";
   Real tOut[nOut] "tokens of output places";
   Real testValue[nIn] "test values of input arcs";
@@ -42,8 +42,6 @@ protected
     "Integer test values of input arcs (for generating events!)";
   Integer normalArc[nIn]
     "1=no,2=yes, i.e. double arc: test and normal arc or inhibitor and normal arc";
-  Boolean active "Is the transition active?";
-  Boolean fire "Does the transition fire?";
   Boolean disPlaceIn[nIn]
     "Are the input places discrete or continuous? true=discrete";
   Boolean disPlaceOut[nOut]
@@ -57,11 +55,13 @@ protected
   //activation process
   Blocks.activationDis activation(testValue=testValue,testValueInt=testValueInt,normalArc=normalArc,nIn=nIn,nOut=nOut,tIn=tIn, tOut=tOut,tIntIn=tIntIn, tIntOut=tIntOut, arcType=arcType,arcWeightIn=arcWeightIn,arcWeightIntIn=arcWeightIntIn, arcWeightOut=arcWeightOut, arcWeightIntOut=arcWeightIntOut, minTokens=minTokens, maxTokens=maxTokens, minTokensInt=minTokensInt, maxTokensInt=maxTokensInt,firingCon=firingCon,disPlaceIn=disPlaceIn,disPlaceOut=disPlaceOut);
   //Is the transition enabled by all input places?
-  Blocks.allTrue enabledByInPlaces(vec=enableIn);
+  Boolean enabledByInPlaces = Functions.OddsAndEnds.allTrue(enableIn);
    //Is the transition enabled by all output places?
-  Blocks.allTrue enabledByOutPlaces(vec=enableOut);
+  Boolean enabledByOutPlaces = Functions.OddsAndEnds.allTrue(enableOut);
   //****BLOCKS END****//
 public
+  Boolean active "Is the transition active?";
+  Boolean fire "Does the transition fire?";
   PNlib.Interfaces.TransitionIn inPlaces[nIn](
   each active=delayPassed,
   arcWeight=arcWeightIn,
@@ -81,13 +81,13 @@ public
   testValue=testValue,
   testValueint=testValueInt,
   normalArc=normalArc) "connector for input places"
-                       annotation (Placement(transformation(extent={{-56,-10},{-40,10}}, rotation=0),visible=DynamicSelect(true,if nIn==0 then false else true)));
+                       annotation (Placement(transformation(extent={{-56,-10},{-40,10}}, rotation=0)));
   PNlib.Interfaces.TransitionOut outPlaces[nOut](
   each active=delayPassed,
   arcWeight=arcWeightOut,
   arcWeightint=arcWeightIntOut,
   each fire=fire,
-  each enabledByInPlaces=enabledByInPlaces.alltrue,
+  each enabledByInPlaces=enabledByInPlaces,
   each disTransition=true,
   each instSpeed=0,
   each prelimSpeed=0,
@@ -98,7 +98,7 @@ public
   maxTokensint=maxTokensInt,
   disPlace=disPlaceOut,
   enable=enableOut) "connector for output places"                                                                 annotation (Placement(transformation(extent={
-            {40,-10},{56,10}}, rotation=0),visible=DynamicSelect(true,if nOut==0 then false else true)));
+            {40,-10},{56,10}}, rotation=0)));
 equation
   //****MAIN BEGIN****//
    delay_=if delay<=0 then 10^(-6) else delay;  //due to event problems if delay==0
@@ -111,14 +111,14 @@ equation
    //delay passed?
    delayPassed= active and time>=firingTime;
    //firing process
-   fire=if nOut==0 then enabledByInPlaces.alltrue else enabledByOutPlaces.alltrue;
+   fire=if nOut==0 then enabledByInPlaces else enabledByOutPlaces;
    //****MAIN END****//
     //****ANIMATION BEGIN****//
     when fire then
      fireTime=time;
      ani=true;
    end when;
-   color=if (fireTime+settings1.timeFire>=time and settings1.animateTransition==1 and ani) then {255,255,0} else {0,0,0};
+   color=if (fireTime+settings.timeFire>=time and settings.animateTransition==1 and ani) then {255,255,0} else {0,0,0};
    //****ANIMATION END****//
    //****ERROR MESSENGES BEGIN****//
    for i in 1:nIn loop
