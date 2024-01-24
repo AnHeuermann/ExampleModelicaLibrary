@@ -16,19 +16,17 @@ model PD "Discrete Place"
     "enabling probabilities of input transitions" annotation(Dialog(enable = if enablingType==1 then false else true, group = "Enabling"));
   parameter Real enablingProbOut[nOut]=fill(1/nOut,nOut)
     "enabling probabilities of output transitions" annotation(Dialog(enable = if enablingType==1 then false else true, group = "Enabling"));
-  parameter Integer N=settings1.N "N+1=amount of levels" annotation(Dialog(enable = true, group = "Level Concentrations"));
+  parameter Integer N=settings.N "N+1=amount of levels" annotation(Dialog(enable = true, group = "Level Concentrations"));
   //****MODIFIABLE PARAMETERS AND VARIABLES END****//
   Real levelCon
     "conversion of tokens to level concentration according to M and N of the settings box";
-  Integer showPlaceName=settings1.showPlaceName
+  Integer showCapacity=settings.showCapacity
     "only for place animation and display (Do not change!)";
-  Integer showCapacity=settings1.showCapacity
-    "only for place animation and display (Do not change!)";
-  Integer animateMarking=settings1.animateMarking
+  Integer animateMarking=settings.animateMarking
     "only for place animation and display (Do not change!)";
   Real color[3] "only for place animation and display (Do not change!)";
 protected
-  outer PNlib.Settings settings1 "global settings for animation and display";
+  outer PNlib.Settings settings "global settings for animation and display";
   Real tokenscale "only for place animation and display";
   discrete Integer pret "pre marking";
   Integer arcWeightIn[nIn] "Integer weights of input arcs";
@@ -72,7 +70,7 @@ public
   arcWeightint=arcWeightIn,
   active=activeIn,
   enabledByInPlaces=enabledByInPlaces) "connector for input transitions"
-                       annotation (Placement(transformation(extent={{-114,-10},{-98,10}}, rotation=0),visible=DynamicSelect(true,if nIn==0 then false else true),
+                       annotation (Placement(transformation(extent={{-114,-10},{-98,10}}, rotation=0),
     iconTransformation(extent={{-116,-10},{-100,10}})));
   PNlib.Interfaces.PlaceOut outTransition[nOut](
   each t=pret,
@@ -93,7 +91,7 @@ public
   each testValue=-1,
   each testValueint=-1,
   each normalArc=2) "connector for output transitions"
-                         annotation (Placement(transformation(extent={{100,-10},{116,10}}, rotation=0),visible=DynamicSelect(true,if nOut==0 then false else true)));
+                         annotation (Placement(transformation(extent={{100,-10},{116,10}}, rotation=0)));
   Modelica.Blocks.Interfaces.IntegerOutput pd_t=t
     "connector for Simulink connection"                                               annotation (Placement(
         transformation(extent={{-36,68},{-16,88}}), iconTransformation(
@@ -109,15 +107,15 @@ equation
     t=if tokeninout then pret + firingSumIn.firingSum - firingSumOut.firingSum else reStartTokens;
   end when;
   //Conversion of tokens to level concentrations
-  levelCon=t*settings1.M/N;
+  levelCon=t*settings.M/N;
   //****MAIN END****//
   //****ANIMATION BEGIN****//
-  tokenscale= t*settings1.scale;
-  color=if settings1.animatePlace==1 then if tokenscale<100 then {255,255-2.55*tokenscale,255-2.55*tokenscale} else {255,0,0} else {255,255,255};
+  tokenscale= t*settings.scale;
+  color=if settings.animatePlace==1 then if tokenscale<100 then {255,255-2.55*tokenscale,255-2.55*tokenscale} else {255,0,0} else {255,255,255};
   //****ANIMATION END****//
   //****ERROR MESSENGES BEGIN****//
-  assert(abs(sum(enablingProbIn)-1)<1e-6 or nIn==0 or enablingType==1,"The sum of input enabling probabilities has to be equal to 1");
-  assert(abs(sum(enablingProbOut)-1)<1e-6 or nOut==0 or enablingType==1,"The sum of output enabling probabilities has to be equal to 1");
+  assert(Functions.OddsAndEnds.isEqual(sum(enablingProbIn), 1.0, 1e-6) or nIn==0 or enablingType==1,"The sum of input enabling probabilities has to be equal to 1");
+  assert(Functions.OddsAndEnds.isEqual(sum(enablingProbOut), 1.0, 1e-6) or nOut==0 or enablingType==1,"The sum of output enabling probabilities has to be equal to 1");
   assert(startTokens>=minTokens and startTokens<=maxTokens,"minTokens<=startTokens<=maxTokens");
   //****ERROR MESSENGES END****//
   annotation (defaultComponentName = "P1",Icon(graphics={Ellipse(

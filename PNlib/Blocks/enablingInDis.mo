@@ -15,14 +15,14 @@ block enablingInDis "enabling process of discrete input transitions"
 protected
   Boolean TEin[nIn] "enabled input transitions";
   Integer remTAin[nIn] "remaining active input transitions";
-  Real cumEnablingProb[nIn] "cumulated, scaled enabling probabilities";
+  discrete Real cumEnablingProb[nIn] "cumulated, scaled enabling probabilities";
   Integer arcWeightSum "arc weight sum";
   Integer nremTAin "number of remaining active input transitions";
   Integer nTAin "number ofactive input transitions";
   Integer k "iteration index";
   Integer posTE "possible enabled transition";
-  Real randNum "uniform distributed random number";
-  Real sumEnablingProbTAin
+  discrete Real randNum "uniform distributed random number";
+  discrete Real sumEnablingProbTAin
     "sum of the enabling probabilities of the active input transitions";
   Boolean endWhile;
 
@@ -59,11 +59,9 @@ algorithm
             for j in 2:nremTAin loop
               cumEnablingProb[j]:=cumEnablingProb[j-1]+enablingProb[remTAin[j]]/sumEnablingProbTAin;
             end for;
-            //muss hier stehen sonst immer fast gleiche Zufallszahl => immer gleiches enabling
-            randNum := PNlib.Functions.Random.random()/32767;
             for i in 1:nTAin loop
-              randNum := PNlib.Functions.Random.random()/32767;
-                                                //uniform distributed random number
+              randNum := PNlib.Functions.Random.random()/PNlib.Constants.rand_max;
+              //uniform distributed random number
               endWhile:=false;
               k:=1;
               while k<=nremTAin and not endWhile loop

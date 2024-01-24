@@ -11,14 +11,15 @@ model TC "Continuous Transition"
   Boolean firingCon=true "additional firing condition" annotation(Dialog(enable = true, group = "Firing Condition"));
   //****MODIFIABLE PARAMETERS AND VARIABLES END****//
   Boolean fire "Does the transition fire?";
-   Real instantaneousSpeed "instantaneous speed";
-  Integer showTransitionName=settings1.showTransitionName
+  Real instantaneousSpeed "instantaneous speed";
+  Real actualSpeed = if fire then instantaneousSpeed else 0.0;
+  Integer showTransitionName=settings.showTransitionName
     "only for transition animation and display (Do not change!)";
-  Integer animateSpeed=settings1.animateSpeed
+  Integer animateSpeed=settings.animateSpeed
     "only for transition animation and display (Do not change!)";
   Real color[3] "only for transition animation and display (Do not change!)";
 protected
-  outer PNlib.Settings settings1 "global settings for animation and display";
+  outer PNlib.Settings settings "global settings for animation and display";
   Real prelimSpeed=preliminarySpeed.prelimSpeed "preliminary speed";
   Real tIn[nIn] "tokens of input places";
   Real tOut[nOut] "tokens of output places";
@@ -61,7 +62,7 @@ protected
   //Check test values of test arcs
   Blocks.testArcEvent testArcEvent(nIn=nIn,tIn=tIn,testValue=testValue);
   //firing process
-  Blocks.allTrue fire_(vec=enableIn or not disPlaceIn);
+  Boolean fire_ = Functions.OddsAndEnds.allTrue(enableIn or not disPlaceIn);
   //****BLOCKS END****//
 public
   Interfaces.TransitionIn[nIn] inPlaces(each active=activation.active,
@@ -84,7 +85,7 @@ public
    decreasingFactor=decreasingFactorIn,
    testValue=testValue,
    testValueint=testValueInt,
-   normalArc=normalArc) "connector for input places"  annotation (Placement(transformation(extent={{ -56,-10},{-40,10}}, rotation=0),visible=DynamicSelect(true,if nIn==0 then false else true)));
+   normalArc=normalArc) "connector for input places"  annotation (Placement(transformation(extent={{ -56,-10},{-40,10}}, rotation=0)));
   Interfaces.TransitionOut[nOut] outPlaces(each active=activation.active,
   each fire=fire,
   each enabledByInPlaces = true,
@@ -101,16 +102,16 @@ public
   emptied=emptied,
   disPlace=disPlaceOut,
   speedSum=speedSumOut,decreasingFactor=decreasingFactorOut)
-    "connector for output places"                                                          annotation (Placement(transformation(extent={{40,-10},{56,10}}, rotation=0),visible=DynamicSelect(true,if nOut==0 then false else true)));
+    "connector for output places"                                                          annotation (Placement(transformation(extent={{40,-10},{56,10}}, rotation=0)));
 equation
    //****MAIN BEGIN****//
     //firing process
-   fire=fire_.alltrue and activation.active and not maximumSpeed<=0;
+   fire=fire_ and activation.active and not maximumSpeed<=0;
    //instantaneous speed calculation
    instantaneousSpeed=min(min(min(decreasingFactorIn),min(decreasingFactorOut))*maximumSpeed,prelimSpeed);
   //****MAIN END****//
    //****ANIMATION BEGIN****//
-   color=if (fire and settings1.animateTransition==1) then {255,255,0} else {255,255,255};
+   color=if (fire and settings.animateTransition==1) then {255,255,0} else {255,255,255};
    //****ANIMATION END****//
    //****ERROR MESSENGES BEGIN****//  hier noch Message gleiches Kantengewicht und auch Kante dis Place!!
    for i in 1:nIn loop

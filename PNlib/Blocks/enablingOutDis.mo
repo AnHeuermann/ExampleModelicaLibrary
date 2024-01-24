@@ -14,14 +14,15 @@ block enablingOutDis "enabling process of output transitions"
 protected
   Boolean TEout[nOut] "enabled output transitions";
   Integer remTAout[nOut] "remaining active output transitions";
-  Real cumEnablingProb[nOut] "cumulated, scaled enabling probabilities";
+  discrete Real cumEnablingProb[nOut]
+    "cumulated, scaled enabling probabilities";
   Integer arcWeightSum "arc weight sum";
   Integer nremTAout "number of remaining active output transitions";
   Integer nTAout "number of active output transitions";
   Integer k "iteration index";
   Integer posTE "possible enabled transition";
-  Real randNum "uniform distributed random number";
-  Real sumEnablingProbTAout
+  discrete Real randNum "uniform distributed random number";
+  discrete Real sumEnablingProbTAout
     "sum of the enabling probabilities of the active output transitions";
   Boolean endWhile;
 algorithm
@@ -64,9 +65,8 @@ algorithm
                 for j in 2:nremTAout loop
                   cumEnablingProb[j]:=cumEnablingProb[j-1]+enablingProb[remTAout[j]]/sumEnablingProbTAout;
                 end for;
-                randNum := PNlib.Functions.Random.random()/32767; //muss hier stehen sonst immer fast gleiche Zufallszahl => immer gleiches enabling
                 for i in 1:nTAout loop
-                  randNum := PNlib.Functions.Random.random()/32767;  //uniform distributed random number
+                  randNum := PNlib.Functions.Random.random()/PNlib.Constants.rand_max;  //uniform distributed random number
                   endWhile:=false;
                   k:=1;
                   while k<=nremTAout and not endWhile loop
