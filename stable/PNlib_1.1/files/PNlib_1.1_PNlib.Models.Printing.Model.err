@@ -3,20 +3,36 @@ loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/p
 loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
 loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
 loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
-Using package PNlib with version 1.1 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package PNlib with version 1.3 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
 Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
 Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
 Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
 Running command: translateModel(PNlib.Models.Printing.Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.Printing.Model")
 translateModel(PNlib.Models.Printing.Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.Printing.Model")
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001952/0.001952, allocations: 117.9 kB / 15.61 MB, free: 5.25 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.001031/0.001031, allocations: 172.1 kB / 16.52 MB, free: 4.652 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.295/1.295, allocations: 170.5 MB / 187.8 MB, free: 10.38 MB / 154.7 MB
-Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05174/0.05174, allocations: 8.293 MB / 234.7 MB, free: 11.34 MB / 202.7 MB
-Notification: Performance of FrontEnd - loaded program: time 0.0005599/0.00056, allocations: 12 kB / 285.6 MB, free: 6.945 MB / 202.7 MB
-Notification: Performance of FrontEnd - Absyn->SCode: time 0.059/0.05957, allocations: 39.9 MB / 325.5 MB, free: 15 MB / 250.7 MB
-[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/TC.mo:21:3-21:77:writable] Warning: An inner declaration for outer component settings1 could not be found and was automatically generated.
-[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/TC.mo:21:3-21:77:writable] Notification: The diagnostics message for the missing inner is: The settings object is missing
-Notification: Performance of NFInst.instantiate(PNlib.Models.Printing.Model): time 0.2061/0.2657, allocations: 49.16 MB / 374.7 MB, free: 9.168 MB / 266.7 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.00188/0.00188, allocations: 113.3 kB / 15.61 MB, free: 5.191 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009799/0.0009799, allocations: 172.1 kB / 16.51 MB, free: 4.605 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.553/1.553, allocations: 170.5 MB / 187.8 MB, free: 10.39 MB / 154.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        Models
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/DisTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        TDalone
+        PDalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/ConTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        PCalone
+        ConLoopAndArcweight
+        TCalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        allTrue
+        decreasingFactor
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.08703/0.08703, allocations: 14.75 MB / 241.2 MB, free: 4.883 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005567/0.0005567, allocations: 12 kB / 293.6 MB, free: 15.71 MB / 218.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.06075/0.06132, allocations: 41.46 MB / 335.1 MB, free: 6.227 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/TC.mo:22:3-22:76:writable] Warning: An inner declaration for outer component settings could not be found and was automatically generated.
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/TC.mo:22:3-22:76:writable] Notification: The diagnostics message for the missing inner is: The settings object is missing
+Notification: Performance of NFInst.instantiate(PNlib.Models.Printing.Model): time 0.2079/0.2693, allocations: 47.97 MB / 383 MB, free: 14.65 MB / 282.7 MB
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/testArcEvent.mo:22:6-28:14:writable] Error: A when-statement may not be used inside a function or a while, if, or for-clause.
-Notification: Performance of FrontEnd: time 0.0006402/0.2663, allocations: 212.3 kB / 374.9 MB, free: 8.98 MB / 266.7 MB
+Notification: Performance of FrontEnd: time 0.0006949/0.27, allocations: 222.6 kB / 383.3 MB, free: 14.45 MB / 282.7 MB

@@ -3,19 +3,36 @@ loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/p
 loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
 loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
 loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
-Using package PNlib with version 1.1 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package PNlib with version 1.3 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
 Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
 Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
 Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
 Running command: translateModel(PNlib.Models.FlushToilet,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.FlushToilet")
 translateModel(PNlib.Models.FlushToilet,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.FlushToilet")
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001948/0.001948, allocations: 114.7 kB / 15.61 MB, free: 5.211 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009966/0.0009966, allocations: 172.1 kB / 16.51 MB, free: 4.633 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.272/1.272, allocations: 170.5 MB / 187.8 MB, free: 10.4 MB / 154.7 MB
-Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05151/0.05151, allocations: 8.297 MB / 234.7 MB, free: 11.36 MB / 202.7 MB
-Notification: Performance of FrontEnd - loaded program: time 0.0005558/0.0005558, allocations: 12 kB / 285.6 MB, free: 6.945 MB / 202.7 MB
-Notification: Performance of FrontEnd - Absyn->SCode: time 0.06138/0.06195, allocations: 39.92 MB / 325.5 MB, free: 15 MB / 250.7 MB
-Notification: Performance of NFInst.instantiate(PNlib.Models.FlushToilet): time 0.009301/0.0713, allocations: 9.666 MB / 335.2 MB, free: 5.293 MB / 250.7 MB
-[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Constants/package.mo:7:3-7:52:writable] Error: Function arcsin not found in scope Constants.
-[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/activationDis.mo:40:9-42:15:writable] Error: Variable Constants.eps not found in scope activationDis.
-Notification: Performance of FrontEnd: time 0.3351/0.4065, allocations: 19.82 MB / 355 MB, free: 8.219 MB / 250.8 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.002234/0.002234, allocations: 118.3 kB / 15.61 MB, free: 5.211 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.001516/0.001516, allocations: 170.8 kB / 16.51 MB, free: 4.633 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.278/1.278, allocations: 170.5 MB / 187.8 MB, free: 10.4 MB / 154.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        Models
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/DisTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        TDalone
+        PDalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/ConTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        PCalone
+        ConLoopAndArcweight
+        TCalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        allTrue
+        decreasingFactor
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.08745/0.08745, allocations: 14.76 MB / 241.2 MB, free: 4.887 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.000572/0.000572, allocations: 12 kB / 293.6 MB, free: 15.71 MB / 218.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.06152/0.0621, allocations: 41.47 MB / 335.1 MB, free: 6.227 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PD.mo:29:3-29:76:writable] Warning: An inner declaration for outer component settings could not be found and was automatically generated.
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PD.mo:29:3-29:76:writable] Notification: The diagnostics message for the missing inner is: The settings object is missing
+Notification: Performance of NFInst.instantiate(PNlib.Models.FlushToilet): time 0.1958/0.2579, allocations: 28.62 MB / 363.7 MB, free: 0.6875 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/testArcEvent.mo:22:6-28:14:writable] Error: A when-statement may not be used inside a function or a while, if, or for-clause.
+Notification: Performance of FrontEnd: time 0.00304/0.261, allocations: 1.505 MB / 365.2 MB, free: 15.44 MB / 266.7 MB

@@ -1,0 +1,38 @@
+Running: ./testmodel.py --libraries=/home/runner/.openmodelica/libraries/ --ompython_omhome= PNlib_1.1_PNlib.Examples.Models.Senseo.Senseo_Model.conf.json
+loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
+Using package PNlib with version 1.3 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
+Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
+Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
+Running command: translateModel(PNlib.Examples.Models.Senseo.Senseo_Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.Models.Senseo.Senseo_Model")
+translateModel(PNlib.Examples.Models.Senseo.Senseo_Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.Models.Senseo.Senseo_Model")
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001757/0.001758, allocations: 114.7 kB / 15.61 MB, free: 5.25 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009961/0.0009961, allocations: 170.8 kB / 16.52 MB, free: 4.652 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.265/1.265, allocations: 170.5 MB / 187.8 MB, free: 10.38 MB / 154.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        Models
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/DisTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        TDalone
+        PDalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/ConTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        PCalone
+        ConLoopAndArcweight
+        TCalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        allTrue
+        decreasingFactor
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.08691/0.08691, allocations: 14.76 MB / 241.2 MB, free: 4.855 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005788/0.0005788, allocations: 19.98 kB / 293.6 MB, free: 15.66 MB / 218.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.06038/0.06097, allocations: 41.46 MB / 335.1 MB, free: 6.188 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PC.mo:33:3-33:76:writable] Warning: An inner declaration for outer component settings could not be found and was automatically generated.
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PC.mo:33:3-33:76:writable] Notification: The diagnostics message for the missing inner is: The settings object is missing
+Notification: Performance of NFInst.instantiate(PNlib.Examples.Models.Senseo.Senseo_Model): time 0.2048/0.2658, allocations: 38.99 MB / 374.1 MB, free: 7.047 MB / 266.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/testArcEvent.mo:22:6-28:14:writable] Error: A when-statement may not be used inside a function or a while, if, or for-clause.
+Notification: Performance of FrontEnd: time 0.0006343/0.2665, allocations: 218.2 kB / 374.3 MB, free: 6.852 MB / 266.7 MB

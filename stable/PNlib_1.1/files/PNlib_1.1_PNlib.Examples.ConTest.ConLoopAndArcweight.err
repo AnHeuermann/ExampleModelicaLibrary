@@ -3,19 +3,36 @@ loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/p
 loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
 loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
 loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
-Using package PNlib with version 1.1 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package PNlib with version 1.3 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
 Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
 Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
 Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
 Running command: translateModel(PNlib.Examples.ConTest.ConLoopAndArcweight,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.ConTest.ConLoopAndArcweight")
 translateModel(PNlib.Examples.ConTest.ConLoopAndArcweight,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.ConTest.ConLoopAndArcweight")
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001946/0.001946, allocations: 117.1 kB / 15.61 MB, free: 5.211 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009882/0.0009882, allocations: 170.8 kB / 16.51 MB, free: 4.633 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.329/1.329, allocations: 170.5 MB / 187.8 MB, free: 10.4 MB / 154.7 MB
-Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05094/0.05094, allocations: 8.301 MB / 234.7 MB, free: 11.36 MB / 202.7 MB
-Notification: Performance of FrontEnd - loaded program: time 0.0008473/0.0008474, allocations: 15.94 kB / 285.6 MB, free: 6.965 MB / 202.7 MB
-Notification: Performance of FrontEnd - Absyn->SCode: time 0.05846/0.05933, allocations: 39.91 MB / 325.5 MB, free: 15.02 MB / 250.7 MB
-Notification: Performance of NFInst.instantiate(PNlib.Examples.ConTest.ConLoopAndArcweight): time 0.003913/0.06328, allocations: 2.792 MB / 328.3 MB, free: 12.22 MB / 250.7 MB
-[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Constants/package.mo:7:3-7:52:writable] Error: Function arcsin not found in scope Constants.
-[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PC.mo:9:3-9:122:writable] Error: Variable PNlib.Constants.inf not found in scope PC.
-Notification: Performance of FrontEnd: time 0.3213/0.3846, allocations: 19.21 MB / 347.5 MB, free: 8.941 MB / 250.8 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001936/0.001936, allocations: 120 kB / 15.62 MB, free: 4.781 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.001037/0.001037, allocations: 168.8 kB / 16.51 MB, free: 4.336 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.273/1.273, allocations: 170.5 MB / 187.8 MB, free: 10.4 MB / 154.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        Models
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/DisTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        TDalone
+        PDalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/ConTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        PCalone
+        ConLoopAndArcweight
+        TCalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        allTrue
+        decreasingFactor
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.08749/0.08749, allocations: 14.75 MB / 241.2 MB, free: 4.887 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005758/0.0005758, allocations: 15.98 kB / 293.6 MB, free: 15.7 MB / 218.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.06161/0.0622, allocations: 41.47 MB / 335.1 MB, free: 6.223 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PC.mo:33:3-33:76:writable] Warning: An inner declaration for outer component settings could not be found and was automatically generated.
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PC.mo:33:3-33:76:writable] Notification: The diagnostics message for the missing inner is: The settings object is missing
+Notification: Performance of NFInst.instantiate(PNlib.Examples.ConTest.ConLoopAndArcweight): time 0.3303/0.3925, allocations: 21.89 MB / 357 MB, free: 6.988 MB / 250.8 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/testArcEvent.mo:22:6-28:14:writable] Error: A when-statement may not be used inside a function or a while, if, or for-clause.
+Notification: Performance of FrontEnd: time 0.002291/0.3948, allocations: 1.127 MB / 358.1 MB, free: 6.57 MB / 250.8 MB

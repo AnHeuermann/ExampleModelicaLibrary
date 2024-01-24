@@ -1,0 +1,44 @@
+Running: ./testmodel.py --libraries=/home/runner/.openmodelica/libraries/ --ompython_omhome= PNlib_1.1_PNlib.Examples.DisTest.EightConflictProb.conf.json
+loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
+Using package PNlib with version 1.3 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
+Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
+Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
+Running command: translateModel(PNlib.Examples.DisTest.EightConflictProb,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.DisTest.EightConflictProb")
+translateModel(PNlib.Examples.DisTest.EightConflictProb,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.DisTest.EightConflictProb")
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.002242/0.002242, allocations: 118.7 kB / 15.61 MB, free: 5.25 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.001442/0.001442, allocations: 170.8 kB / 16.52 MB, free: 4.652 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.281/1.281, allocations: 170.5 MB / 187.8 MB, free: 10.38 MB / 154.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        Models
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/DisTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        TDalone
+        PDalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/ConTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        PCalone
+        ConLoopAndArcweight
+        TCalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        allTrue
+        decreasingFactor
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.08713/0.08713, allocations: 14.75 MB / 241.2 MB, free: 4.871 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005698/0.0005698, allocations: 19.98 kB / 293.6 MB, free: 15.68 MB / 218.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.06071/0.0613, allocations: 41.45 MB / 335.1 MB, free: 6.215 MB / 250.7 MB
+Notification: Performance of NFInst.instantiate(PNlib.Examples.DisTest.EightConflictProb): time 0.004617/0.06596, allocations: 4.221 MB / 339.3 MB, free: 1.973 MB / 250.7 MB
+Notification: Performance of NFInst.instExpressions: time 0.003264/0.06925, allocations: 1.939 MB / 341.2 MB, free: 28 kB / 250.7 MB
+Notification: Performance of NFInst.updateImplicitVariability: time 0.0004282/0.06969, allocations: 27.94 kB / 341.3 MB, free: 0 / 250.7 MB
+Notification: Performance of NFTyping.typeComponents: time 0.1743/0.244, allocations: 397.7 kB / 341.6 MB, free: 11.09 MB / 250.7 MB
+Notification: Performance of NFTyping.typeBindings: time 0.001218/0.2453, allocations: 448.3 kB / 342.1 MB, free: 11.09 MB / 250.7 MB
+Notification: Performance of NFTyping.typeClassSections: time 0.001548/0.2468, allocations: 0.754 MB / 342.8 MB, free: 11.09 MB / 250.7 MB
+Notification: Performance of NFFlatten.flatten: time 0.002554/0.2494, allocations: 2.917 MB / 345.8 MB, free: 10.36 MB / 250.7 MB
+Notification: Performance of NFFlatten.resolveConnections: time 0.00106/0.2505, allocations: 1.019 MB / 346.8 MB, free: 9.953 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Functions/Random/randomMax.mo:2:1-10:14:writable] Error: External function '_randomMax' could not be found in any of the given shared libraries:
+  /home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/OpenModelicaLibraryTesting/PNlib_1.1_PNlib.Examples.DisTest.EightConflictProb/
+Notification: Performance of FrontEnd: time 0.0008061/0.2513, allocations: 0.8683 MB / 347.6 MB, free: 9.508 MB / 250.7 MB

@@ -1,0 +1,44 @@
+Running: ./testmodel.py --libraries=/home/runner/.openmodelica/libraries/ --ompython_omhome= PNlib_1.1_PNlib.Examples.HybTest.HybLoopAndArcweight.conf.json
+loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
+loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
+Using package PNlib with version 1.3 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
+Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
+Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
+Running command: translateModel(PNlib.Examples.HybTest.HybLoopAndArcweight,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.HybTest.HybLoopAndArcweight")
+translateModel(PNlib.Examples.HybTest.HybLoopAndArcweight,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.HybTest.HybLoopAndArcweight")
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001917/0.001917, allocations: 115.2 kB / 15.61 MB, free: 5.25 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009907/0.0009907, allocations: 172.1 kB / 16.52 MB, free: 4.652 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.275/1.275, allocations: 170.5 MB / 187.8 MB, free: 10.36 MB / 154.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        Models
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/DisTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        TDalone
+        PDalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/ConTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        PCalone
+        ConLoopAndArcweight
+        TCalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        allTrue
+        decreasingFactor
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.08734/0.08734, allocations: 14.76 MB / 241.2 MB, free: 4.836 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0006215/0.0006215, allocations: 15.98 kB / 293.6 MB, free: 15.66 MB / 218.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.06192/0.06256, allocations: 41.46 MB / 335.1 MB, free: 6.195 MB / 250.7 MB
+Notification: Performance of NFInst.instantiate(PNlib.Examples.HybTest.HybLoopAndArcweight): time 0.00296/0.06557, allocations: 1.895 MB / 337 MB, free: 4.281 MB / 250.7 MB
+Notification: Performance of NFInst.instExpressions: time 0.001823/0.06741, allocations: 1.135 MB / 338.1 MB, free: 3.145 MB / 250.7 MB
+Notification: Performance of NFInst.updateImplicitVariability: time 0.000185/0.06761, allocations: 11.94 kB / 338.1 MB, free: 3.133 MB / 250.7 MB
+Notification: Performance of NFTyping.typeComponents: time 0.000273/0.06789, allocations: 119 kB / 338.2 MB, free: 3.016 MB / 250.7 MB
+Notification: Performance of NFTyping.typeBindings: time 0.0004085/0.06831, allocations: 123 kB / 338.3 MB, free: 2.895 MB / 250.7 MB
+Notification: Performance of NFTyping.typeClassSections: time 0.001086/0.06941, allocations: 0.5068 MB / 338.9 MB, free: 2.387 MB / 250.7 MB
+Notification: Performance of NFFlatten.flatten: time 0.0009501/0.07037, allocations: 1.291 MB / 340.1 MB, free: 1.094 MB / 250.7 MB
+Notification: Performance of NFFlatten.resolveConnections: time 0.0003048/0.07069, allocations: 259 kB / 340.4 MB, free: 0.8281 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Functions/Random/randomMax.mo:2:1-10:14:writable] Error: External function '_randomMax' could not be found in any of the given shared libraries:
+  /home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/OpenModelicaLibraryTesting/PNlib_1.1_PNlib.Examples.HybTest.HybLoopAndArcweight/
+Notification: Performance of FrontEnd: time 0.0004496/0.07115, allocations: 302.6 kB / 340.7 MB, free: 0.5312 MB / 250.7 MB

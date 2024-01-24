@@ -3,19 +3,42 @@ loadFile("/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/p
 loadFile("/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo", uses=false)
 loadFile("/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo", uses=false)
 loadFile("/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo", uses=false)
-Using package PNlib with version 1.1 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
+Using package PNlib with version 1.3 (/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo)
 Using package Modelica with version 3.2.1 (/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo)
 Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo)
 Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
 Running command: translateModel(PNlib.Examples.DisTest.DisLoopAndArcweight,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.DisTest.DisLoopAndArcweight")
 translateModel(PNlib.Examples.DisTest.DisLoopAndArcweight,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.DisTest.DisLoopAndArcweight")
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001719/0.001719, allocations: 116.5 kB / 15.61 MB, free: 5.211 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009869/0.0009869, allocations: 172.1 kB / 16.51 MB, free: 4.633 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.267/1.267, allocations: 170.5 MB / 187.8 MB, free: 10.4 MB / 154.7 MB
-Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05071/0.05071, allocations: 8.297 MB / 234.7 MB, free: 11.36 MB / 202.7 MB
-Notification: Performance of FrontEnd - loaded program: time 0.001122/0.001122, allocations: 19.98 kB / 285.6 MB, free: 6.965 MB / 202.7 MB
-Notification: Performance of FrontEnd - Absyn->SCode: time 0.07362/0.07476, allocations: 39.9 MB / 325.5 MB, free: 15.02 MB / 250.7 MB
-Notification: Performance of NFInst.instantiate(PNlib.Examples.DisTest.DisLoopAndArcweight): time 0.002737/0.07754, allocations: 1.646 MB / 327.2 MB, free: 13.38 MB / 250.7 MB
-[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Constants/package.mo:7:3-7:52:writable] Error: Function arcsin not found in scope Constants.
-[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PD.mo:9:3-9:135:writable] Error: Variable PNlib.Constants.Integer_inf not found in scope PD.
-Notification: Performance of FrontEnd: time 0.3669/0.4444, allocations: 19.2 MB / 346.4 MB, free: 9.098 MB / 250.8 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001876/0.001876, allocations: 118.4 kB / 15.61 MB, free: 5.199 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009712/0.0009712, allocations: 163.4 kB / 16.51 MB, free: 4.637 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.275/1.275, allocations: 170.5 MB / 187.8 MB, free: 10.4 MB / 154.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        Models
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/DisTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        TDalone
+        PDalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Examples/ConTest/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        PCalone
+        ConLoopAndArcweight
+        TCalone
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/package.order:0:0-0:0:readonly] Warning: The package.order file does not list all .mo files and directories (containing package.mo) present in its directory.
+Missing names are:
+        allTrue
+        decreasingFactor
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.08647/0.08647, allocations: 14.76 MB / 241.2 MB, free: 4.871 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005375/0.0005375, allocations: 16 kB / 293.6 MB, free: 15.7 MB / 218.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.05942/0.05998, allocations: 41.47 MB / 335.1 MB, free: 6.219 MB / 250.7 MB
+Notification: Performance of NFInst.instantiate(PNlib.Examples.DisTest.DisLoopAndArcweight): time 0.002779/0.0628, allocations: 1.631 MB / 336.7 MB, free: 4.574 MB / 250.7 MB
+Notification: Performance of NFInst.instExpressions: time 0.001345/0.06416, allocations: 0.7964 MB / 337.5 MB, free: 3.777 MB / 250.7 MB
+Notification: Performance of NFInst.updateImplicitVariability: time 0.000147/0.06432, allocations: 7.938 kB / 337.5 MB, free: 3.77 MB / 250.7 MB
+Notification: Performance of NFTyping.typeComponents: time 0.0002605/0.06459, allocations: 99.12 kB / 337.6 MB, free: 3.672 MB / 250.7 MB
+Notification: Performance of NFTyping.typeBindings: time 0.0003931/0.065, allocations: 111 kB / 337.7 MB, free: 3.562 MB / 250.7 MB
+Notification: Performance of NFTyping.typeClassSections: time 0.0006121/0.06564, allocations: 339.5 kB / 338 MB, free: 3.23 MB / 250.7 MB
+Notification: Performance of NFFlatten.flatten: time 0.000995/0.06664, allocations: 1.115 MB / 339.2 MB, free: 2.113 MB / 250.7 MB
+Notification: Performance of NFFlatten.resolveConnections: time 0.0002836/0.06694, allocations: 250.7 kB / 339.4 MB, free: 1.867 MB / 250.7 MB
+[/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Functions/Random/randomMax.mo:2:1-10:14:writable] Error: External function '_randomMax' could not be found in any of the given shared libraries:
+  /home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/OpenModelicaLibraryTesting/PNlib_1.1_PNlib.Examples.DisTest.DisLoopAndArcweight/
+Notification: Performance of FrontEnd: time 0.0002954/0.06725, allocations: 278.8 kB / 339.7 MB, free: 1.594 MB / 250.7 MB
