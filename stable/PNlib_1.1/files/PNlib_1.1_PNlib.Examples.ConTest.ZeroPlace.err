@@ -9,12 +9,12 @@ Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/C
 Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
 Running command: translateModel(PNlib.Examples.ConTest.ZeroPlace,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.ConTest.ZeroPlace")
 translateModel(PNlib.Examples.ConTest.ZeroPlace,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.ConTest.ZeroPlace")
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001965/0.001965, allocations: 118.3 kB / 15.61 MB, free: 5.25 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.001001/0.001001, allocations: 170.8 kB / 16.52 MB, free: 4.652 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.263/1.263, allocations: 170.5 MB / 187.8 MB, free: 10.38 MB / 154.7 MB
-Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05122/0.05122, allocations: 8.297 MB / 234.7 MB, free: 11.34 MB / 202.7 MB
-Notification: Performance of FrontEnd - loaded program: time 0.0008769/0.0008769, allocations: 8 kB / 285.6 MB, free: 6.949 MB / 202.7 MB
-Notification: Performance of FrontEnd - Absyn->SCode: time 0.09392/0.09482, allocations: 39.92 MB / 325.5 MB, free: 15 MB / 250.7 MB
-Notification: Performance of NFInst.instantiate(PNlib.Examples.ConTest.ZeroPlace): time 0.007216/0.1021, allocations: 3.279 MB / 328.8 MB, free: 11.71 MB / 250.7 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001831/0.001831, allocations: 112.8 kB / 15.61 MB, free: 5.195 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009876/0.0009876, allocations: 168.1 kB / 16.51 MB, free: 4.609 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.293/1.293, allocations: 170.5 MB / 187.8 MB, free: 10.4 MB / 154.7 MB
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05059/0.05059, allocations: 8.305 MB / 234.7 MB, free: 11.36 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005473/0.0005474, allocations: 12 kB / 285.6 MB, free: 6.016 MB / 234.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.05781/0.05838, allocations: 39.92 MB / 325.5 MB, free: 14.04 MB / 282.7 MB
+Notification: Performance of NFInst.instantiate(PNlib.Examples.ConTest.ZeroPlace): time 0.003974/0.06239, allocations: 3.275 MB / 328.8 MB, free: 10.74 MB / 282.7 MB
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/testArcEvent.mo:22:6-28:14:writable] Error: A when-statement may not be used inside a function or a while, if, or for-clause.
-Notification: Performance of FrontEnd: time 0.0006825/0.1028, allocations: 183.6 kB / 329 MB, free: 11.53 MB / 250.7 MB
+Notification: Performance of FrontEnd: time 0.0004463/0.06286, allocations: 183.6 kB / 329 MB, free: 10.56 MB / 282.7 MB

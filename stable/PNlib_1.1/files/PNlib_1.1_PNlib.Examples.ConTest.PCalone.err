@@ -9,13 +9,13 @@ Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/C
 Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
 Running command: translateModel(PNlib.Examples.ConTest.PCalone,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.ConTest.PCalone")
 translateModel(PNlib.Examples.ConTest.PCalone,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Examples.ConTest.PCalone")
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.002066/0.002066, allocations: 113.1 kB / 15.61 MB, free: 4.832 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.001418/0.001418, allocations: 168.8 kB / 16.51 MB, free: 4.379 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.276/1.276, allocations: 170.5 MB / 187.8 MB, free: 10.33 MB / 154.7 MB
-Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.0517/0.0517, allocations: 8.301 MB / 234.7 MB, free: 11.29 MB / 202.7 MB
-Notification: Performance of FrontEnd - loaded program: time 0.0005738/0.0005739, allocations: 11.98 kB / 285.6 MB, free: 6.938 MB / 202.7 MB
-Notification: Performance of FrontEnd - Absyn->SCode: time 0.05745/0.05804, allocations: 39.92 MB / 325.5 MB, free: 14.99 MB / 250.7 MB
-Notification: Performance of NFInst.instantiate(PNlib.Examples.ConTest.PCalone): time 0.002922/0.061, allocations: 1.49 MB / 327 MB, free: 13.49 MB / 250.7 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001919/0.001919, allocations: 119.2 kB / 15.61 MB, free: 5.246 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009929/0.0009929, allocations: 170.9 kB / 16.51 MB, free: 4.652 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.271/1.271, allocations: 170.5 MB / 187.8 MB, free: 10.38 MB / 154.7 MB
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.0507/0.0507, allocations: 8.309 MB / 234.7 MB, free: 11.34 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005669/0.0005669, allocations: 12 kB / 285.6 MB, free: 6.953 MB / 202.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.05802/0.0586, allocations: 39.91 MB / 325.5 MB, free: 15.01 MB / 250.7 MB
+Notification: Performance of NFInst.instantiate(PNlib.Examples.ConTest.PCalone): time 0.002959/0.06161, allocations: 1.49 MB / 327 MB, free: 13.51 MB / 250.7 MB
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Constants/package.mo:7:3-7:52:writable] Error: Function arcsin not found in scope Constants.
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PC.mo:9:3-9:122:writable] Error: Variable PNlib.Constants.inf not found in scope PC.
-Notification: Performance of FrontEnd: time 0.3195/0.3805, allocations: 19.21 MB / 346.2 MB, free: 9.086 MB / 250.8 MB
+Notification: Performance of FrontEnd: time 0.3234/0.3851, allocations: 19.2 MB / 346.2 MB, free: 9.102 MB / 250.8 MB

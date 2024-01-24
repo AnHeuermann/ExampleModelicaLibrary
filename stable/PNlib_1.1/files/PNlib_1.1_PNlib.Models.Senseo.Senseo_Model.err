@@ -9,14 +9,14 @@ Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/C
 Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
 Running command: translateModel(PNlib.Models.Senseo.Senseo_Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.Senseo.Senseo_Model")
 translateModel(PNlib.Models.Senseo.Senseo_Model,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.Senseo.Senseo_Model")
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001924/0.001924, allocations: 114.7 kB / 15.61 MB, free: 5.199 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009803/0.0009804, allocations: 167.4 kB / 16.51 MB, free: 4.637 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.323/1.323, allocations: 170.5 MB / 187.8 MB, free: 10.39 MB / 154.7 MB
-Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.04995/0.04995, allocations: 8.301 MB / 234.7 MB, free: 11.36 MB / 202.7 MB
-Notification: Performance of FrontEnd - loaded program: time 0.0005544/0.0005544, allocations: 12 kB / 285.6 MB, free: 6.969 MB / 202.7 MB
-Notification: Performance of FrontEnd - Absyn->SCode: time 0.05977/0.06034, allocations: 39.91 MB / 325.5 MB, free: 15.03 MB / 250.7 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001926/0.001927, allocations: 112.2 kB / 15.61 MB, free: 4.758 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.00101/0.00101, allocations: 167.9 kB / 16.51 MB, free: 4.336 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.277/1.277, allocations: 170.5 MB / 187.8 MB, free: 10.35 MB / 154.7 MB
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05036/0.05036, allocations: 8.297 MB / 234.7 MB, free: 11.31 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005625/0.0005625, allocations: 12 kB / 285.6 MB, free: 6.938 MB / 202.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.05962/0.0602, allocations: 39.9 MB / 325.5 MB, free: 15 MB / 250.7 MB
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PC.mo:31:3-31:77:writable] Warning: An inner declaration for outer component settings1 could not be found and was automatically generated.
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/PC.mo:31:3-31:77:writable] Notification: The diagnostics message for the missing inner is: The settings object is missing
-Notification: Performance of NFInst.instantiate(PNlib.Models.Senseo.Senseo_Model): time 0.1986/0.259, allocations: 39.41 MB / 364.9 MB, free: 0.8477 MB / 250.7 MB
+Notification: Performance of NFInst.instantiate(PNlib.Models.Senseo.Senseo_Model): time 0.2019/0.2622, allocations: 39.41 MB / 364.9 MB, free: 0.8711 MB / 250.7 MB
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/testArcEvent.mo:22:6-28:14:writable] Error: A when-statement may not be used inside a function or a while, if, or for-clause.
-Notification: Performance of FrontEnd: time 0.0006087/0.2596, allocations: 232.8 kB / 365.1 MB, free: 0.7617 MB / 250.7 MB
+Notification: Performance of FrontEnd: time 0.0006046/0.2628, allocations: 228.9 kB / 365.1 MB, free: 0.7891 MB / 250.7 MB
