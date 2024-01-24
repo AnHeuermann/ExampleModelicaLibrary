@@ -9,13 +9,13 @@ Using package Complex with version 3.2.1 (/home/runner/.openmodelica/libraries/C
 Using package ModelicaServices with version 3.2.1 (/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo)
 Running command: translateModel(PNlib.Models.FlushToilet,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.FlushToilet")
 translateModel(PNlib.Models.FlushToilet,tolerance=1e-06,outputFormat="empty",numberOfIntervals=5000,variableFilter="",fileNamePrefix="PNlib_1.1_PNlib.Models.FlushToilet")
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.002185/0.002185, allocations: 111.4 kB / 15.61 MB, free: 4.719 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009805/0.0009805, allocations: 169.5 kB / 16.51 MB, free: 4.297 MB / 13.93 MB
-Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.334/1.334, allocations: 170.5 MB / 187.8 MB, free: 10.32 MB / 154.7 MB
-Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05096/0.05096, allocations: 8.305 MB / 234.7 MB, free: 11.29 MB / 202.7 MB
-Notification: Performance of FrontEnd - loaded program: time 0.000557/0.0005571, allocations: 12 kB / 285.6 MB, free: 6.953 MB / 202.7 MB
-Notification: Performance of FrontEnd - Absyn->SCode: time 0.05753/0.0581, allocations: 39.91 MB / 325.5 MB, free: 15.01 MB / 250.7 MB
-Notification: Performance of NFInst.instantiate(PNlib.Models.FlushToilet): time 0.009113/0.06724, allocations: 9.677 MB / 335.2 MB, free: 5.285 MB / 250.7 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/ModelicaServices 3.2.1+maint.om/package.mo): time 0.001916/0.001916, allocations: 118.2 kB / 15.61 MB, free: 4.758 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Complex 3.2.1+maint.om/package.mo): time 0.0009891/0.0009891, allocations: 167.3 kB / 16.51 MB, free: 4.332 MB / 13.93 MB
+Notification: Performance of loadFile(/home/runner/.openmodelica/libraries/Modelica 3.2.1+maint.om/package.mo): time 1.298/1.298, allocations: 170.5 MB / 187.8 MB, free: 10.39 MB / 154.7 MB
+Notification: Performance of loadFile(/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/package.mo): time 0.05163/0.05163, allocations: 8.301 MB / 234.7 MB, free: 11.36 MB / 202.7 MB
+Notification: Performance of FrontEnd - loaded program: time 0.0005569/0.000557, allocations: 15.98 kB / 285.6 MB, free: 6.98 MB / 202.7 MB
+Notification: Performance of FrontEnd - Absyn->SCode: time 0.05901/0.05958, allocations: 39.91 MB / 325.5 MB, free: 15.04 MB / 250.7 MB
+Notification: Performance of NFInst.instantiate(PNlib.Models.FlushToilet): time 0.009077/0.06869, allocations: 9.674 MB / 335.2 MB, free: 5.324 MB / 250.7 MB
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Constants/package.mo:7:3-7:52:writable] Error: Function arcsin not found in scope Constants.
 [/home/runner/work/ExampleModelicaLibrary/ExampleModelicaLibrary/PNlib/Blocks/activationDis.mo:40:9-42:15:writable] Error: Variable Constants.eps not found in scope activationDis.
-Notification: Performance of FrontEnd: time 0.3319/0.3991, allocations: 19.81 MB / 355 MB, free: 8.215 MB / 250.8 MB
+Notification: Performance of FrontEnd: time 0.3291/0.3978, allocations: 19.82 MB / 355 MB, free: 8.195 MB / 250.8 MB
